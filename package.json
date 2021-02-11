@@ -1,0 +1,21 @@
+{
+  "name": "tornadoelectron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "electron": "^11.2.3",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.2.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=img/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . tornadoelectron-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=img/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . tornadoelectron-app --overwrite --asar=true --platform=linux --arch=x64 --icon=img/icons/png/icon.png --prune=true --out=release-builds"
+  },
+  "author": "Ilija20",
+  "license": "ISC",
+  "description": ""
+}
